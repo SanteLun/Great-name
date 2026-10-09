@@ -1,0 +1,43 @@
+horizon,category,selected_model,selection_reason,n_pairs
+1,Все категории,pooled_seasonal,selected_model_missing_forecast,14611
+1,Все категории,pooled_seasonal,warmup,8330
+1,Все категории,prophet,past_common_mae,35
+1,Здоровье,pooled_seasonal,selected_model_missing_forecast,14604
+1,Здоровье,pooled_seasonal,warmup,8330
+1,Здоровье,prophet,past_common_mae,42
+1,Маркетплейсы,catboost,past_common_mae,6295
+1,Маркетплейсы,pooled_seasonal,selected_model_missing_forecast,2095
+1,Маркетплейсы,pooled_seasonal,warmup,14589
+1,Маркетплейсы,prophet,past_common_mae,3
+1,Общественное питание,catboost,past_common_mae,16747
+1,Общественное питание,lightgbm,past_common_mae,2087
+1,Общественное питание,pooled_seasonal,warmup,4159
+1,Продовольствие,pooled_seasonal,past_common_mae,12562
+1,Продовольствие,pooled_seasonal,selected_model_missing_forecast,4153
+1,Продовольствие,pooled_seasonal,warmup,6245
+1,Продовольствие,prophet,past_common_mae,16
+1,Транспорт,chronos,past_common_mae,2084
+1,Транспорт,lightgbm,past_common_mae,2094
+1,Транспорт,naive_last,past_common_mae,10484
+1,Транспорт,pooled_seasonal,warmup,8330
+3,Все категории,pooled_seasonal,warmup,8359
+3,Здоровье,pooled_seasonal,warmup,8359
+3,Маркетплейсы,pooled_seasonal,warmup,8359
+3,Общественное питание,pooled_seasonal,past_common_mae,2097
+3,Общественное питание,pooled_seasonal,warmup,6262
+3,Продовольствие,pooled_seasonal,selected_model_missing_forecast,2089
+3,Продовольствие,pooled_seasonal,warmup,6262
+3,Продовольствие,prophet,past_common_mae,8
+3,Транспорт,pooled_seasonal,warmup,8359
+6,Все категории,pooled_seasonal,warmup,8349
+6,Здоровье,pooled_seasonal,warmup,8349
+6,Маркетплейсы,pooled_seasonal,warmup,8349
+6,Общественное питание,pooled_seasonal,warmup,8349
+6,Продовольствие,pooled_seasonal,warmup,8349
+6,Транспорт,pooled_seasonal,warmup,8349
+12,Все категории,pooled_seasonal,warmup,2076
+12,Здоровье,pooled_seasonal,warmup,2076
+12,Маркетплейсы,pooled_seasonal,warmup,2076
+12,Общественное питание,pooled_seasonal,warmup,2076
+12,Продовольствие,pooled_seasonal,warmup,2076
+12,Транспорт,pooled_seasonal,warmup,2076

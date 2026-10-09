@@ -1,0 +1,8 @@
+model_name: amazon/chronos-bolt-tiny
+revision: a0e552de83495b5c28c14c71c374f3e33280b340
+configured_revision: null
+cached_checkpoint_sha256:
+  config.json: 278f0086733031635fb1c861cb01c1bad6477420c7fcb19381a2993e335785e0
+  model.safetensors: 75068728d376d2bec670379eeef4bfb4d24c0cfe24d957451f8d19b447030a32
+note: Cached checkpoint fingerprint recorded after the completed offline run; cached
+  main ref was used

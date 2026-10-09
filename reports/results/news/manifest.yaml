@@ -1,0 +1,86 @@
+mode: official_cbr_headlines
+n_articles: 17
+config:
+  sources:
+  - name: cbr_press
+    url: https://www.cbr.ru/press/keypr/
+    enabled: false
+  - name: rossstat_emiss
+    url: https://www.fedstat.ru/
+    enabled: false
+  - name: rss_general
+    url: https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru
+    enabled: false
+  topics:
+    inflation:
+    - инфляци
+    - цены
+    - рост цен
+    - продовольствен
+    rates:
+    - ключев
+    - ЦБ
+    - процентная ставка
+    - денежно-кредитн
+    income:
+    - доходы населени
+    - зарплат
+    - реальные доходы
+    - потребительский спрос
+    crisis:
+    - кризис
+    - санкци
+    - шок
+    - обвал
+    - рецессия
+    - безработ
+    retail:
+    - розничная торговля
+    - ритейл
+    - маркетплейс
+    - e-commerce
+  sentiment:
+    model: lexicon
+    fallback_lexicon: true
+  alignment:
+    agg: weighted_sum
+    lag_decay: 0.35
+    max_lag_months: 3
+    regional_elasticity: true
+    anticipation_window_days: 0
+  use_in_features: true
+  use_in_shock_trigger: true
+  output_dir: outputs/news
+model_params:
+  objective: regression
+  metric: mae
+  learning_rate: 0.03
+  num_leaves: 63
+  max_depth: -1
+  min_child_samples: 20
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  n_estimators: 500
+  early_stopping_rounds: 50
+  random_state: 42
+  n_jobs: 4
+  deterministic: true
+  force_col_wise: true
+  verbosity: -1
+cutoffs:
+- 2024-01
+- 2024-02
+- 2024-03
+- 2024-04
+- 2024-05
+- 2024-06
+- 2024-07
+- 2024-08
+- 2024-09
+- 2024-10
+- 2024-11
+territories: 80
+limitations: Small monetary-policy corpus; no local coverage; nominal spending direction
+  is not sentiment ground truth.

@@ -1,0 +1,10 @@
+key_rate:
+  definition: "Ключевая ставка на конец календарного месяца, % годовых"
+  source: "Пресс-служба Банка России"
+  publication_records: data/news/cbr_releases.csv
+  source_archive: https://www.cbr.ru/dkp/mp_dec/decision_key_rate/
+  initial_rate_source: https://www.cbr.ru/press/pr/?file=16092022_133000key.htm
+  availability: "Только опубликованные к концу месяца решения; в модели лаги 1 и 3 месяца"
+excluded_legacy:
+  columns: [cpi_mom, cpi_yoy, usd_rub]
+  reason: "Ошибки исторического ИПЦ и отсутствие точных источников/дат публикаций; не используются"

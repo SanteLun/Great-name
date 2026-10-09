@@ -1,0 +1,90 @@
+source: outputs\full_combined\forecast_results.csv
+source_sha256: d250e10f1ff1be81cb27210cb5dfe98f3f986628a138ed9493226d44591a082d
+reproducibility:
+  source_sha256:
+    src/__init__.py: 7a20d63dcc636d20d70ef28ac1b662973725a1303c4e0dd1dfd20f143442ae19
+    src/changepoint/__init__.py: cd9d90dcc9cdab6c992d4413e019c06c26e7924dac187acec30fc480f968495d
+    src/changepoint/benchmark.py: b7a7777608f0c376a58a944cce68bbcef1406369ab1901faf731c2e330014f7b
+    src/changepoint/detectors.py: 6e6882605b5e462e4ddb857a8c991d18445fe85917ea478e47656d1514bd282b
+    src/changepoint/diffusion.py: 635d941ac11234295987fbf7d2ce200c75c1fffe1fcbdc6315952b395ad81171
+    src/changepoint/early_warning.py: 5500e1046f2c4088e158fe371e74c0676acf772dae544cc3ffbfb3c5090e9fb7
+    src/changepoint/residuals.py: c2b4eaa8edb7c2c2af038fafd0bd3136c4ffa14528fb682dc2581c023412facd
+    src/data/__init__.py: 9f01e2053fe4dcaead18bccc68eb7fc752a1d555fe3589fb48ae0720da21b147
+    src/data/cleaner.py: 93e95e28e00aa5109a7f184c7409701d1a19ec34fdcfe4aa49ac87af741179e0
+    src/data/loader.py: 6088d9eedff26bdcb8da15affc0f6c7f54d10335cd1622264235872f3292be94
+    src/data/reference.py: 0a561f0ee97a38509304799cbeae4b00b0c01a932bce7e88f8413bbc8c95c243
+    src/evaluation/__init__.py: 66b8b13158c8db43d7cf699443c0e78dc52818317825480c01f3f41625b819b7
+    src/evaluation/audit.py: 63c05cbf21006898f9bced0c00ca7f75c499b1c54b030b09c28e30b0e5c03d90
+    src/evaluation/calibration.py: f822f54ec81c3df82a4c86e0fd7cf6c8a0edd6feceb367509e401fad469c1304
+    src/evaluation/provenance.py: 30a238a6c0981fb3179d786a408bea19138883bf570e323ecc8b09263181c6e4
+    src/evaluation/walk_forward.py: 26d0c0f2ac6363c0bed312350a4c6eeb3f723436b76ea703378e3bec999047b5
+    src/features/__init__.py: 8495fc1317d69541f281bfd377173d828d10db00b75f466512a27e547156d80c
+    src/features/builder.py: 6eb81e6e9f9b2b6c960a3ba1635fa05b7a92dcfa64e29e231eb104992093c152
+    src/features/calendar.py: bf858e8dee716cdc525482726211741b1540a93ef03c057e48620cc6949f7ba0
+    src/features/lags.py: 6a2c6758f3da505d94ee4f5b6d5e98c46569207602fe5d0eca159fc2c5cc2504
+    src/features/macro.py: b1a400a5f44bd7277b41f38bc040b545181aac52370b3927f82aacf966477f60
+    src/features/spatial.py: 24ebcdcf70fd1ab88fd46d8e37308f81e29e7033aab41adb69b4f0ab0e631313
+    src/forecasting/__init__.py: d124cdb165d208e73213867e4a139f1ba9cb822326579b1b5244925b758d3cfb
+    src/forecasting/catboost_model.py: b0d88dcaff9a3a565b19cf1dae50e89fc5b8d5caba0669bd10541dd19d083b43
+    src/forecasting/chronos_model.py: f5d1bc4ec5f51f80176490a09303273fdd9e5193c0da5aa753d0cc07bebb1e9e
+    src/forecasting/ensemble.py: 35223adbb0beada5e3dd5bd6f38e99c0261120a69cd6b786d1a5fffbca45c412
+    src/forecasting/lightgbm_model.py: 4eb0eb3a81cd6eb494de5378814ca7a50e16158c4924a4fef3b7edf469195e53
+    src/forecasting/metrics.py: 2a9696a79e1aec6a378119bab1a2f81c706febfb5556227660381c60f362c655
+    src/forecasting/naive.py: c6984f07bbcbf1fb4af30eacaf1d95a1a47189a6a7817b8e4c5e1f1830b15926
+    src/forecasting/pooled_seasonal.py: c498dca3b50cbf79f06f36c74b0199c61b2b397045a4a963c77de7c5deacec12
+    src/forecasting/prequential.py: 1d59787a1c5eca4b95bf7bf784a13ad050c56decf2615151ac03019dc24a7868
+    src/forecasting/prophet_model.py: 963aa364d5f32a409b06650155679a641b99b99e1aaa79cff5dc3db8a6a6279c
+    src/forecasting/selection.py: bc7d1b7afe93847dbbcd040531056c921018d9921fc2a7a4e5a10e83be6e9dbc
+    src/forecasting/short_history.py: 58a910c2e66dab6d8e1b7fbc95e276e2aaa8ce65d5c9f5639c9097390dc33c3b
+    src/news/__init__.py: efa53f2839050a5697673bd03933dd2595172b59630bae3fadd763676e4a6de2
+    src/news/causality.py: 4f59ae73d4c5a8701ee7f8af983054b4aa2eeb9ce60bc6b1a8f3ecf967d0da90
+    src/news/pipeline.py: 70c3017612a4229fbb90982c36b1ab0625a50e1c877fcb1a38fcba32039661a9
+    src/news/sentiment.py: 9554cc061c530600207858161a5db56bccc0122bf20655c4c86c8c68750ef7a6
+    src/utils/__init__.py: 9ab12d5f756c5ee23e41a99d755e476a7009e5e7f55ecbfa3c63d8d47e9d83ea
+    src/utils/config.py: e2f4ce7c403c800f21d8058c6e24e315769ff5c0414d7e67c223e2c347173604
+    src/utils/logging.py: 7cdc5d47ecf9eebae35aa347bdb666a1d7c5dc4ac05da1a657554e55e950d640
+    scripts/01_prepare_data.py: f9d665d81954e5938c1ff2477b13ebcb375bec08d419a7203ac558a5cea1cdd7
+    scripts/02_run_forecasting.py: 94faecd895a88886c94203729556b15ddc089aaec6110d89069534fc9be9b553
+    scripts/03_run_changepoint.py: 6400b9e99cfe5029e1e61f2acb725b8fe8913ae1690d3c864252f78795af749a
+    scripts/04_news_pipeline.py: 8bf990bfbeab91cb6d83d5714a07d6543cf4c9f5cc10531833cf740aa5328dbd
+    scripts/05_make_report.py: e17e45a67c08d6ffb61e901018a5f5c5b97bbd7fb19cd29e625d7be5f4482911
+    scripts/06_improve_evaluation.py: 9f856fe055ae0b426cb8b2b9aa7656b7c76d022e0d1ed649c9328b07cfe2b292
+    scripts/07_calibrate_detectors.py: 687ec17b7ee1c68570083499e4adc9212c5a3d4bc2e34ce76090a4b5561ae451
+    scripts/08_collect_official_news.py: f43d25f4660d52b3039c0cf52fff8690d8252b82708c5fd275630c6c72524528
+    scripts/09_news_ablation.py: 0db4814f2edce5637d30d76158d330bf00654beab11539082770cfe23e7a4f6c
+    scripts/10_monitor_validated.py: bf332663dc06d0e08c987b8357ee082f03fc100e403f873686f4ff535eebb458
+    scripts/11_forecast_future.py: fa6ccd8df3f12130041b080cf834da90de87b65177bc40bdfd9f32698883e324
+    scripts/12_diffusion_benchmark.py: 35bc6c8c2d9eb9c234866c6323a36e924cd16f09165522644304eb381e2b80af
+    scripts/13_calibrate_intervals.py: 1f9907a59b0a4e6a15e22c2972a13ad5a1eaea3ccc775d8235f254827f27eaed
+    scripts/14_audit_solution.py: b4b57332c7ad87a98f1df9419cc2a28df3d7168c8826f72abfb80f0c93a5eda0
+    scripts/16_finalize_evaluation.py: 64af9741e9521dc43c11b07bb5bfbc68623adc9c8ba50cff7a7836a122a1a8b6
+    scripts/run_pipeline.py: 53f3b92ae8aef7a2bb2ed46671e9bb8f66540b5a1f91e9db4803440bcedbca98
+    configs/changepoint.yaml: 533ebaff5ec50b3a12295d761c8c454984fcca2b7b7792ecad4c5d0ac2427805
+    configs/data.yaml: 5d6371fb8bee972cd51f3c9a6fc2f1ee89b283eaab6d986ef741ceefe9c92839
+    configs/features.yaml: 4d1598e39c18604c48993338b137bc26654792b319d52479e9322b27386ae9e5
+    configs/forecasting.yaml: b662387b5757ce4d222dae63138444999212bebd89fbf2a941de210cf80a0ca9
+    configs/macro.csv: b5fdfa37a1f70f3e40db1632b45da79ea011b25c2b8af6b1738cddbfa544b7aa
+    configs/macro_sources.yaml: f318a3ec8093aeb74bf8845eb314abddec1206b457140cd6f711486bc2b5293e
+    configs/macro_unverified_legacy.csv: 0bdaf35490d3ef41fc92b8a1cbc7e4430068a37b055cb38c9e45be3542f281ab
+    configs/news.yaml: 79d3a60b87cbc6f9338c08d433731417ebde7894294abf278bb2f95015ff82b6
+  package_versions:
+    numpy: 2.4.2
+    pandas: 3.0.1
+    pyarrow: 25.0.1
+    lightgbm: 4.7.0
+    catboost: 1.2.10
+    prophet: 1.4.0
+    cmdstanpy: 1.3.0
+    ruptures: 1.1.9
+    scipy: 1.17.1
+    statsmodels: 0.15.0
+    torch: null
+    chronos-forecasting: null
+selection:
+  enable: true
+  min_pairs: 20
+  min_origins: 2
+  warmup_model: pooled_seasonal
+validation: finite, unique, exact horizons, consistent actuals
+note: 'Selection protocol added after existing experiments: use an independent future
+  holdout for confirmation.'

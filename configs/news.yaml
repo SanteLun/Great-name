@@ -1,0 +1,35 @@
+# Конфигурация новостного контура
+sources:
+  - name: cbr_press        # пресс-релизы ЦБ РФ
+    url: "https://www.cbr.ru/press/keypr/"
+    enabled: false          # включается при сетевом доступе
+  - name: rossstat_emiss   # показатели Росстата (EMISS)
+    url: "https://www.fedstat.ru/"
+    enabled: false
+  - name: rss_general      # RSS-ленты новостей (РИА/ТАСС/Google News)
+    url: "https://news.google.com/rss?hl=ru&gl=RU&ceid=RU:ru"
+    enabled: false
+
+topics:
+  inflation: ["инфляци", "цены", "рост цен", "продовольствен"]
+  rates: ["ключев", "ЦБ", "процентная ставка", "денежно-кредитн"]
+  income: ["доходы населени", "зарплат", "реальные доходы", "потребительский спрос"]
+  crisis: ["кризис", "санкци", "шок", "обвал", "рецессия", "безработ"]
+  retail: ["розничная торговля", "ритейл", "маркетплейс", "e-commerce"]
+
+sentiment:
+  model: lexicon            # текущий воспроизводимый режим, без скачивания модели
+  fallback_lexicon: true    # словарный метод тональности без нейросети
+
+alignment:
+  # Согласование дневных новостей с месячными данными СберИндекса
+  agg: weighted_sum          # weighted_sum | mean | count
+  lag_decay: 0.35            # экспоненциальное затухание эффекта (месяцы): w=exp(-lag*decay)
+  max_lag_months: 3          # до какого лага учитывать влияние новости
+  regional_elasticity: true  # масштабирование общероссийской новости через market_access
+  anticipation_window_days: 0   # признаки привязаны к дате публикации
+
+use_in_features: true        # подавать ли новостные индексы в прогнозную модель
+use_in_shock_trigger: true   # использовать ли как триггер шоков
+
+output_dir: outputs/news

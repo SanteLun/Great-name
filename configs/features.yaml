@@ -1,0 +1,46 @@
+# Конфигурация построения признаков
+calendar:
+  month: true             # номер месяца (сезонность)
+  quarter: true
+  year: true
+  day_of_month: true      # полезно при переводе на дневной уровень
+  is_eoy: true            # эффект конца года (декабрь)
+  working_days: true      # число рабочих дней в месяце (по РФ)
+  holidays: true          # число праздничных дней в месяце (РФ)
+
+lags:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 9
+  - 12
+
+rolling:
+  windows: [3, 6]
+  features: [mean, std, min, max, trend]   # trend = линейный наклон на окне
+
+diffs:
+  enable: true
+  orders: [1, 12]          # yoy-разности, помесячные
+
+# Пространственные признаки (уникальная особенность набора СберИндекса)
+spatial:
+  enable: true
+  neighbor_k: 8            # сколько ближайших соседей по highway/railway
+  decay_exponent: 1.0      # вес = 1/distance**decay
+  lag_months: [1, 2, 3]    # лаги диффузии шоков от соседей (только прошлое)
+  connection_types: [highway, railway]
+  use_market_access: true
+
+# Макроэкономические признаки: только проверенная ключевая ставка ЦБ
+macro:
+  enable: true
+  lags: [1, 3]                   # публикации текущего месяца могут быть ещё недоступны
+
+# Категориальные признаки
+categorical:
+  territory_id: true
+  category: true

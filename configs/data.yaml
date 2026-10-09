@@ -1,0 +1,34 @@
+# Конфигурация данных СберИндекса
+paths:
+  data_dir: data/hackathonlicence
+  consumption: data/hackathonlicence/consumption.parquet
+  market_access: data/hackathonlicence/market_access.parquet
+  connection: data/hackathonlicence/connection.parquet
+  processed_dir: data/processed
+  reference: data/reference  # справочники (названия МО, ОКТМО) — подгружается при наличии
+
+# Категории расходов из PDF-лицензии
+categories:
+  - "Все категории"
+  - "Здоровье"
+  - "Маркетплейсы"
+  - "Общественное питание"
+  - "Продовольствие"
+  - "Транспорт"
+
+# Основная категория-цель для пайплайна по умолчанию
+default_category: "Все категории"
+
+target_column: value
+date_format: "%Y-%m"
+frequency: "M"           # месячная периодичность (для Period)
+
+# Обработка пропусков
+imputation:
+  method: forward         # forward | neighbors | both; linear — совместимый псевдоним forward
+  neighbor_k: 5           # число ближайших соседей для пространственной интерполяции
+  max_gap_months: 3       # максимум месяцев переноса последнего известного значения
+
+# Трансформация целевой переменной
+transform:
+  apply: true             # лог-преобразование log1p

@@ -1,0 +1,6 @@
+# Install in an isolated environment; evaluated on CPU, Python 3.14.
+chronos-forecasting==2.3.2
+torch==2.14.1
+transformers==5.19.0
+huggingface-hub==1.33.0
+accelerate==1.15.0

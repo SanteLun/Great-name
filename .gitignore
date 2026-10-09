@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venv-foundation/
+venv/
+
+# Данные (большие, загружаются отдельно)
+data/hackathonlicence/*.parquet
+data/processed/
+data/reference/
+
+# Артефакты запусков
+outputs/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Логи
+*.log
+catboost_info/
+
+
+# Publication archive and test cache
+dist/
+.pytest_cache/

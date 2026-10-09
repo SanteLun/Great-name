@@ -1,0 +1,71 @@
+methods:
+  cusum:
+    enable: true
+    threshold_factor: 4.0
+    drift: 0.75
+    cooldown: 3
+  peltt:
+    enable: true
+    model: rbf
+    pen: 1.5
+  binseg:
+    enable: true
+    model: rbf
+    pen: 2.5
+  bocpd:
+    enable: true
+    hazard: 0.02
+    prior_scale: 1.0
+    threshold_prob: 0.6
+  rif:
+    enable: false
+    n_trees: 100
+residual_based:
+  enable: true
+  model: lightgbm
+  detector: bocpd
+  std_window: 6
+  zscore_threshold: 2.5
+benchmark:
+  n_series: 500
+  length: 60
+  seed: 42
+  shocks:
+  - type: level
+    magnitude:
+    - 0.5
+    - 2.0
+  - type: trend
+    magnitude:
+    - 0.1
+    - 0.5
+  - type: variance
+    magnitude:
+    - 1.5
+    - 3.0
+  - type: spike
+    magnitude:
+    - 2.0
+    - 4.0
+  metrics:
+  - precision
+  - recall
+  - f1
+  - detection_delay
+  - lead_time
+real_events:
+- date: 2023-07
+  label: повышение ключевой ставки ЦБ (7.5% -> 8.5%)
+- date: 2023-08
+  label: повышение ключевой ставки до 12%
+- date: 2023-09
+  label: повышение ключевой ставки до 13%
+- date: 2023-10
+  label: повышение ключевой ставки до 15%
+- date: 2023-12
+  label: повышение ключевой ставки до 16%
+- date: 2024-07
+  label: повышение ключевой ставки до 18%
+- date: 2024-10
+  label: повышение ключевой ставки до 21%
+output_dir: outputs/changepoint
